@@ -1,5 +1,6 @@
 
 function sumaNumeros() {
+	alert("Para sumar");
     alert( document.getElementById("numero1").value );
     alert( document.getElementById("numero2").value );
 }
