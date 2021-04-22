@@ -2,12 +2,8 @@
   "ExpandedNodes": [
     "",
     "\\departamental2",
-    "\\plantilla",
-    "\\plantilla\\dist\\img",
-    "\\plantilla\\dist\\img\\credit",
-    "\\plantilla\\plugins\\fontawesome-free",
-    "\\plantilla\\plugins\\fontawesome-free\\css"
+    "\\departamental2\\js"
   ],
-  "SelectedNode": "\\departamental2\\calculadora.js",
+  "SelectedNode": "\\departamental2\\ejercicio5_jps.html",
   "PreviewInSolutionExplorer": false
 }
