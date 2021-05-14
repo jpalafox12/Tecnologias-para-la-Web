@@ -273,13 +273,17 @@
 
                             </div>
                           </div>
-
                         </div>
 
                         <div class="row">
                           <div class="col-6">
-                            <label for="horas">Archivo (solo una constancia y en .pdf</label>
-                            <input type="text" class="form-group" id="horas" placeholder="constacias1.pdf"><button type="button-default">Browse</button>
+                            <!-- /input-group -->
+                            <strong>Archivo (solo una constancia y en .pdf</strong>
+                            <div class="input-group mb-3">
+                              <input type="text" class="form-control rounded-0">
+                                <button type="button-default">Browse</button>
+                            </div>
+                            <!-- /input-group -->
                           </div>
                         </div>
 
@@ -331,7 +335,7 @@
                             <div class="form-group">
                               <label>Fecha de inicio</label>
                                 <div class="input-group date" id="reservationdate" data-target-input="nearest">
-                                    <input type="text" class="form-control datetimepicker-input" data-target="#reservationdate"/>
+                                    <input type="text" class="form-control datetimepicker-input" data-target="#reservationdate" value="23-12-2020	"/>
                                     <div class="input-group-append" data-target="#reservationdate" data-toggle="datetimepicker">
                                         <div class="input-group-text"><i class="fa fa-calendar"></i></div>
                                     </div>
@@ -344,7 +348,7 @@
                               <div class="form-group">
                                 <label>Fecha de termino</label>
                                   <div class="input-group date" id="reservationdate" data-target-input="nearest">
-                                      <input type="text" class="form-control datetimepicker-input" data-target="#reservationdate"/>
+                                      <input type="text" class="form-control datetimepicker-input" data-target="#reservationdate" value="23-12-2020	"/>
                                       <div class="input-group-append" data-target="#reservationdate" data-toggle="datetimepicker">
                                           <div class="input-group-text"><i class="fa fa-calendar"></i></div>
                                       </div>
@@ -357,28 +361,32 @@
                           <div class="col-3">
                             <div class="form-group">
                               <label for="horas">Horas</label>
-                              <input type="number" class="form-control" id="horas" value="0" min="0" value="20">
+                              <input type="number" class="form-control" id="horas" value="20" min="0">
 
                             </div>
-                          </div>
-
                         </div>
+                      </div>
+                      
+                      <div class="row">
+                        <div class="col-12">
+                          <!-- /input-group -->
+                          <strong>Archivo (solo una constancia y en .pdf</strong>
+                          <div class="input-group mb-3">
+                            <input type="text" class="form-control rounded-0" value="constancia1.pdf">
+                              <button type="button-default">Browse</button>
+                          </div>
+                          <!-- /input-group -->
+                        </div>
+                      </div>
 
-                        <div class="row">
-                          <div class="col-6">
-                            <label for="horas">Archivo (solo una constancia y en .pdf</label>
-                            <input type="text" class="form-group" id="horas" placeholder="constacias1.pdf"><button type="button-default">Browse</button>
+                      <div class="row">
+                        <div class="col-12">
+                          <div class="form-group">
+                            <label>Observaciones</label>
+                            <textarea class="form-control" rows="6" placeholder="Ingrese las observaciones que considere necesarias"></textarea>
                           </div>
                         </div>
-
-                        <div class="row">
-                          <div class="col-12">
-                            <div class="form-group">
-                              <label>Observaciones</label>
-                              <textarea class="form-control" rows="6" placeholder="Ingrese las observaciones que considere necesarias"></textarea>
-                            </div>
-                          </div>
-                        </div>
+                      </div>
 
                       </div>
                       <div class="modal-footer justify-content-between">
