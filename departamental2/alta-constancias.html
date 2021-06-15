@@ -5,16 +5,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Electivas | Constacias</title>
 
-  <!-- Google Font: Source Sans Pro -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="../plantilla/plugins/fontawesome-free/css/all.min.css">
-  <!-- DataTables -->
-  <link rel="stylesheet" href="../plantilla/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
-  <link rel="stylesheet" href="../plantilla/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
-  <link rel="stylesheet" href="../plantilla/plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
-  <!-- Theme style -->
-  <link rel="stylesheet" href="../plantilla/dist/css/adminlte.min.css">
+<!-- Google Font: Source Sans Pro -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+<!-- Font Awesome -->
+<link rel="stylesheet" href="../plantilla/plugins/fontawesome-free/css/all.min.css">
+<!-- DataTables -->
+<link rel="stylesheet" href="../plantilla/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+<link rel="stylesheet" href="../plantilla/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+<link rel="stylesheet" href="../plantilla/plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
+<!-- Theme style -->
+<link rel="stylesheet" href="../plantilla/dist/css/adminlte.min.css">
+<!-- daterange picker -->
+<link rel="stylesheet" href="../plantilla/plugins/daterangepicker/daterangepicker.css">
+<!-- iCheck for checkboxes and radio inputs -->
+<link rel="stylesheet" href="../plantilla/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+<!-- Bootstrap Color Picker -->
+<link rel="stylesheet" href="../plantilla/plugins/bootstrap-colorpicker/css/bootstrap-colorpicker.min.css">
+<!-- Tempusdominus Bootstrap 4 -->
+<link rel="stylesheet" href="../plantilla/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+<!-- Select2 -->
+<link rel="stylesheet" href="../plantilla/plugins/select2/css/select2.min.css">
+<link rel="stylesheet" href="../plantilla/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css">
+<!-- Bootstrap4 Duallistbox -->
+<link rel="stylesheet" href="../plantilla/plugins/bootstrap4-duallistbox/bootstrap-duallistbox.min.css">
+<!-- BS Stepper -->
+<link rel="stylesheet" href="../plantilla/plugins/bs-stepper/css/bs-stepper.min.css">
+<!-- dropzonejs -->
+<link rel="stylesheet" href="../plantilla/plugins/dropzone/min/dropzone.min.css">
 </head>
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">
@@ -92,7 +109,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a href="#" class="nav-link">
+          <a href="login.html" class="nav-link">
             <i class="nav-icon far fa-image"></i>
             <p>
               Salir
@@ -135,12 +152,13 @@
               <div class="card-header">
                 <h3 class="card-title">Alta de constancias</h3>
                 
-                <button type="button"  style="float: right;" class="btn btn-success" data-toggle="modal" data-target="#modal-lg">
+                <button type="button"  style="float: right;" class="btn btn-success" data-toggle="modal" data-target="#modal-lg" onclick="">
                   Nueva constancia
                 </button>
 
               </div>
               <!-- /.card-header -->
+              <!-- COREGIR Y USAR DATATABLE -->
               <div class="card-body">
                 <table id="example1" class="table table-bordered table-striped">
                   <thead>
@@ -151,7 +169,7 @@
                     <th>Acciones</th>
                   </tr>
                   </thead>
-                  <tbody>
+                  <!--<tbody>
                   <tr>
                     <td>Curso de Android</td>
                     <td>23-12-2020</td>
@@ -201,12 +219,13 @@
                     <td>13-12-2019</td>
                     <td>25</td>
                     <td> 
-                        <button type="button" class="btn btn-danger" data-toggle="tooltip" data-placement="right" title="La constancia NO especifica horas.">
+                        <button type="button" class="btn btn-danger" data-toggle="tooltip" data-placement="right" 
+                        title="La constancia NO especifica horas.">
                           Rechazada
                         </button>
                     </td>
                   </tr>                  
-                  </tbody>
+                  </tbody>-->
                   <tfoot>
                     <tr>
                       <th>Nombre de la actividad</th>
@@ -231,33 +250,33 @@
                         <div class="row">
                           <div class="col-12">
                             <div class="form-group">
-                              <label for="nombre_actividad">Nombre de la actividad</label>
-                              <input type="text" class="form-control" id="nombre_actividad" placeholder="Digite nombre de la actividad">
+                              <label for="nombre_actividad_create">Nombre de la actividad</label>
+                              <input type="text" class="form-control" id="nombre_actividad_create" placeholder="Digite nombre de la actividad">
                             </div>
                           </div>
                         </div>
 
                         <div class="row">
                           <div class="col-6">
-                            <!-- Date -- FECHA INICIO -->
+                            <!-- Inicio Date -- FECHA INICIO -->
                             <div class="form-group">
-                              <label>Fecha de inicio</label>
-                                <div class="input-group date" id="reservationdate" data-target-input="nearest">
-                                    <input type="text" class="form-control datetimepicker-input" data-target="#reservationdate"/>
-                                    <div class="input-group-append" data-target="#reservationdate" data-toggle="datetimepicker">
+                              <label for="fecha_inicio_create">Fecha de Inicio</label>
+                                <div class="input-group date" id="fecha_inicio_create" data-target-input="nearest">
+                                    <input type="text" class="form-control datetimepicker-input" data-target="#fecha_inicio_create"/>
+                                    <div class="input-group-append" data-target="#fecha_inicio_create" data-toggle="datetimepicker">
                                         <div class="input-group-text"><i class="fa fa-calendar"></i></div>
                                     </div>
                                 </div>
                             </div>
                           </div>
-                            <!-- Date -- FECHA INICIO -->
+                            <!-- Fin Date -- FECHA INICIO -->
                             <div class="col-6">
-                              <!-- Date -- FECHA TERMINO -->
+                              <!-- Inicio Date -- FECHA TERMINO -->
                               <div class="form-group">
-                                <label>Fecha de termino</label>
-                                  <div class="input-group date" id="reservationdate" data-target-input="nearest">
-                                      <input type="text" class="form-control datetimepicker-input" data-target="#reservationdate"/>
-                                      <div class="input-group-append" data-target="#reservationdate" data-toggle="datetimepicker">
+                                <label for="fecha_termino_create">Fecha de termino</label>
+                                  <div class="input-group date" id="fecha_termino_create" data-target-input="nearest">
+                                      <input type="text" class="form-control datetimepicker-input" data-target="#fecha_termino_create"/>
+                                      <div class="input-group-append" data-target="#fecha_termino_create" data-toggle="datetimepicker">
                                           <div class="input-group-text"><i class="fa fa-calendar"></i></div>
                                       </div>
                                   </div>
@@ -268,30 +287,27 @@
                         <div class="row">
                           <div class="col-3">
                             <div class="form-group">
-                              <label for="horas">Horas</label>
-                              <input type="number" class="form-control" id="horas" value="0" min="0">
-
+                              <label for="horas_create">Horas</label>
+                              <input type="number" class="form-control" id="horas_create" value="0" min="0">
                             </div>
                           </div>
-                        </div>
+                          <div class="col-3">
 
-                        <div class="row">
+                          </div>
                           <div class="col-6">
-                            <!-- /input-group -->
-                            <strong>Archivo (solo una constancia y en .pdf</strong>
-                            <div class="input-group mb-3">
-                              <input type="text" class="form-control rounded-0">
-                                <button type="button-default">Browse</button>
+                            <label for="exampleInputFile">Archivo (solo una constancia y en .pdf)</label>
+                            <div class="custom-file">
+                              <input type="file" class="custom-file-input" id="archivo_create">
+                              <label class="custom-file-label" for="archivo_create">constacias1.pdf</label>
                             </div>
-                            <!-- /input-group -->
                           </div>
                         </div>
 
                         <div class="row">
                           <div class="col-12">
                             <div class="form-group">
-                              <label>Observaciones</label>
-                              <textarea class="form-control" rows="6" placeholder="Ingrese las observaciones que considere necesarias"></textarea>
+                              <label for="observaciones_create">Observaciones</label>
+                              <textarea class="form-control" id="observaciones_create" rows="5" placeholder="Ingrese las observaciones que considere necesarias"></textarea>
                             </div>
                           </div>
                         </div>
@@ -299,7 +315,7 @@
                       </div>
                       <div class="modal-footer justify-content-between">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
-                        <button type="button" class="btn btn-success">Guardar</button>
+                        <button type="button" class="btn btn-success" onclick="actionCreate();">Guardar</button>
                       </div>
                     </div>
                     <!-- /.modal-content -->
@@ -310,8 +326,9 @@
 
                 <!-- /.modal para ACTUALIZAR -- BOTON -- Actualizar -->
                 <!-- ----------------------------------------------- -->
+                <!-- /.modal -->
                 <div class="modal fade" id="modal-lg-actualizar">
-                  <div class="modal-dialog modal-lg-actualizar">
+                  <div class="modal-dialog modal-lg modal-dialog-centered">
                     <div class="modal-content">
                       <div class="modal-header">
                         <h4 class="modal-title">Actualizar constancia</h4>
@@ -320,84 +337,87 @@
                         </button>
                       </div>
                       <div class="modal-body">
+                        <!--Renglon 1.- Nombre de la actividad -->
                         <div class="row">
                           <div class="col-12">
                             <div class="form-group">
-                              <label for="nombre_actividad">Nombre de la actividad</label>
-                              <input type="text" class="form-control" id="nombre_actividad" placeholder="Digite nombre de la actividad" value="Curso de Android	">
+                              <label for="eje_tematico">Nombre de la actividad</label>
+                              <input type="text" class="form-control" id="nombre_actividad_update" placeholder="Digite eje temático">
                             </div>
                           </div>
                         </div>
+                        <!--FIN Renglon 1.- Nombre de la actividad -->
 
                         <div class="row">
                           <div class="col-6">
-                            <!-- Date -- FECHA INICIO -->
                             <div class="form-group">
-                              <label>Fecha de inicio</label>
-                                <div class="input-group date" id="reservationdate" data-target-input="nearest">
-                                    <input type="text" class="form-control datetimepicker-input" data-target="#reservationdate" value="23-12-2020	"/>
-                                    <div class="input-group-append" data-target="#reservationdate" data-toggle="datetimepicker">
-                                        <div class="input-group-text"><i class="fa fa-calendar"></i></div>
-                                    </div>
+                              <label for="fecha-inicio-act">Fecha de Inicio</label>
+                              <div class="input-group date" id="fecha_inicio_update" data-target-input="nearest">
+                                <input type="text" class="form-control datetimepicker-input" data-target="#fecha-inicio-act"/>
+                                <div class="input-group-append" data-target="#fecha-inicio-act" data-toggle="datetimepicker">
+                                    <div class="input-group-text"><i class="fa fa-calendar"></i></div>
                                 </div>
                             </div>
-                          </div>
-                            <!-- Date -- FECHA INICIO -->
-                            <div class="col-6">
-                              <!-- Date -- FECHA TERMINO -->
-                              <div class="form-group">
-                                <label>Fecha de termino</label>
-                                  <div class="input-group date" id="reservationdate" data-target-input="nearest">
-                                      <input type="text" class="form-control datetimepicker-input" data-target="#reservationdate" value="23-12-2020	"/>
-                                      <div class="input-group-append" data-target="#reservationdate" data-toggle="datetimepicker">
-                                          <div class="input-group-text"><i class="fa fa-calendar"></i></div>
-                                      </div>
-                                  </div>
-                              </div>
+
                             </div>
+                          </div>
+                          <div class="col-6">
+                            <div class="form-group">
+                              <label for="fecha-termino-act">Fecha de Término</label>
+                              <div class="input-group date" id="fecha_termino_update" data-target-input="nearest">
+                                <input type="text" class="form-control datetimepicker-input" data-target="#fecha-termino-act"/>
+                                <div class="input-group-append" data-target="#fecha-termino-act" data-toggle="datetimepicker">
+                                    <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                                </div>
+                            </div>
+                            </div>
+                          </div>
+                          
                         </div>
 
                         <div class="row">
                           <div class="col-3">
                             <div class="form-group">
                               <label for="horas">Horas</label>
-                              <input type="number" class="form-control" id="horas" value="20" min="0">
+                              <input type="number" class="form-control" id="horas_update" value="0" min="0">
+                            </div>
+                          </div>
+                          <div class="col-3">
+
+                          </div>
+                          <div class="col-6">
+                            <label for="exampleInputFile">Archivo (solo una constancia y en .pdf)</label>
+                            <div class="custom-file">
+                              <input type="file" class="custom-file-input" id="archivo_update">
+                              <label class="custom-file-label" for="customFile">constacias1.pdf</label>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="row">
+                          <div class="col-12">
+                            <div class="form-group">
+                              <label>Observaciones</label>
+
+                              <textarea class="form-control" id="observaciones_update" rows="5" placeholder="Ingrese las observaciones..."></textarea>
 
                             </div>
-                        </div>
-                      </div>
-                      
-                      <div class="row">
-                        <div class="col-12">
-                          <!-- /input-group -->
-                          <strong>Archivo (solo una constancia y en .pdf</strong>
-                          <div class="input-group mb-3">
-                            <input type="text" class="form-control rounded-0" value="constancia1.pdf">
-                              <button type="button-default">Browse</button>
-                          </div>
-                          <!-- /input-group -->
-                        </div>
-                      </div>
 
-                      <div class="row">
-                        <div class="col-12">
-                          <div class="form-group">
-                            <label>Observaciones</label>
-                            <textarea class="form-control" rows="6" placeholder="Ingrese las observaciones que considere necesarias"></textarea>
                           </div>
+
                         </div>
-                      </div>
 
                       </div>
                       <div class="modal-footer justify-content-between">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
-                        <button type="button" class="btn btn-success">Guardar</button>
+                        <button type="button" class="btn btn-success"onclick="actionUpdate();">Guardar</button>
                       </div>
                     </div>
                     <!-- /.modal-content -->
                   </div>
                   <!-- /.modal-dialog -->
                 </div>
+                <!-- /.modal -->
                 <!-- /.modal boton  ACTUALIZAR -->
 
                 </div>
@@ -419,7 +439,7 @@
                       </div>
                       <div class="modal-footer justify-content-between">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
-                        <button type="button" class="btn btn-danger">Eliminar</button>
+                        <button type="button" class="btn btn-danger" onclick="actionDelete();" >Eliminar</button>
                       </div>
                     </div>
                     <!-- /.modal-content -->
@@ -439,6 +459,7 @@
       </div>
       <!-- /.container-fluid -->
     </section>
+    
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
@@ -461,6 +482,29 @@
 <script src="../plantilla/plugins/jquery/jquery.min.js"></script>
 <!-- Bootstrap 4 -->
 <script src="../plantilla/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- Select2 -->
+<script src="../plantilla/plugins/select2/js/select2.full.min.js"></script>
+<!-- Bootstrap4 Duallistbox -->
+<script src="../plantilla/plugins/bootstrap4-duallistbox/jquery.bootstrap-duallistbox.min.js"></script>
+<!-- InputMask -->
+<script src="../plantilla/plugins/moment/moment.min.js"></script>
+<script src="../plantilla/plugins/inputmask/jquery.inputmask.min.js"></script>
+<!-- date-range-picker -->
+<script src="../plantilla/plugins/daterangepicker/daterangepicker.js"></script>
+<!-- bootstrap color picker -->
+<script src="../plantilla/plugins/bootstrap-colorpicker/js/bootstrap-colorpicker.min.js"></script>
+<!-- Tempusdominus Bootstrap 4 -->
+<script src="../plantilla/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+<!-- Bootstrap Switch -->
+<script src="../plantilla/plugins/bootstrap-switch/js/bootstrap-switch.min.js"></script>
+<!-- BS-Stepper -->
+<script src="../plantilla/plugins/bs-stepper/js/bs-stepper.min.js"></script>
+<!-- dropzonejs -->
+<script src="../plantilla/plugins/dropzone/min/dropzone.min.js"></script>
+<!-- AdminLTE App -->
+<script src="../plantilla/dist/js/adminlte.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="../plantilla/dist/js/demo.js"></script>
 <!-- DataTables  & Plugins -->
 <script src="../plantilla/plugins/datatables/jquery.dataTables.min.js"></script>
 <script src="../plantilla/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
@@ -474,10 +518,11 @@
 <script src="../plantilla/plugins/datatables-buttons/js/buttons.html5.min.js"></script>
 <script src="../plantilla/plugins/datatables-buttons/js/buttons.print.min.js"></script>
 <script src="../plantilla/plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
-<!-- AdminLTE App -->
-<script src="../plantilla/dist/js/adminlte.min.js"></script>
-<!-- AdminLTE for demo purposes -->
-<script src="../plantilla/dist/js/demo.js"></script>
+
+<!-- Nuestro archivo de Javascrypt -->
+<script src="js/crud-alta-constancias.js"></script>
+
+
 <!-- Page specific script -->
 <script>
   $(function () {
@@ -491,16 +536,28 @@
   $(function () {
   $('[data-toggle="tooltip"]').tooltip()
   })
-  
-    //Date picker
-    $('#reservationdate').datetimepicker({
-        format: 'L'
-    });
-        //Timepicker
-        $('#timepicker').datetimepicker({
-      format: 'LT'
+  //FUNCIONES PARA ELEGIR FECHA EN BOTON --> NUEVA CONSTANCIA
+  //Date picker
+  $('#fecha_inicio_create').datetimepicker({
+    format: 'L'
+  });
+  $('#fecha_termino_create').datetimepicker({
+    format: 'L'
+  });
+  //---------------------------------------------------------------
+    //FUNCIONES PARA ELEGIR FECHA EN BOTON --> ACTUALIZAR CONSTANCIA
+  //Date picker
+  $('#fecha-inicio-act').datetimepicker({
+    format: 'L'
+  });
+  $('#fecha-termino-act').datetimepicker({
+    format: 'L'
+  });
+  //---------------------------------------------------------------
+  $(document).ready(function(){
+     actionRead();
     })
-
+    
 </script>
 </body>
 </html>

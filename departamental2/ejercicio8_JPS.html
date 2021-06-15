@@ -1,3 +1,4 @@
+<!-- VISTA -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -93,10 +94,10 @@
                 CRUD Denominación
               </p>
             </a>
-            <a href="../gallery.html" class="nav-link">
+            <a href="ejercicio9_JPS.html" class="nav-link">
               <i class="nav-icon far fa-image"></i>
               <p>
-                Opcion 5
+                Validación de Electivas
               </p>
             </a>
           </li>
@@ -213,14 +214,14 @@
                         <div class="row">
                           <div class="col-6">
                             <div class="form-group">
-                              <label for="eje_tematico">Eje temático</label>
-                              <input type="text" class="form-control" id="eje_tematico" placeholder="Digite eje temático">
+                              <label for="eje_tematico_create">Eje temático</label>
+                              <input type="text" class="form-control" id="eje_tematico_create" placeholder="Digite eje temático">
                             </div>
                           </div>
                           <div class="col-6">
                             <div class="form-group">
-                              <label for="modalidad">Modalidad</label>
-                              <input type="text" class="form-control" id="modalidad" placeholder="Digite modalidad">
+                              <label for="modalidad_create">Modalidad</label>
+                              <input type="text" class="form-control" id="modalidad_create" placeholder="Digite modalidad">
                             </div>
                           </div>
                         </div>
@@ -228,15 +229,15 @@
                         <div class="row">
                           <div class="col-6">
                             <div class="form-group">
-                              <label for="modalidad">Descripción de créditos</label>
-                              <input type="text" class="form-control" id="descripcion_creditos" placeholder="Digite descripción">
+                              <label for="descripcion_create">Descripción de créditos</label>
+                              <input type="text" class="form-control" id="descripcion_create" placeholder="Digite descripción">
                             </div>
                           </div>
 
                           <div class="col-3">
                             <div class="form-group">
-                              <label for="factor">Factor</label>
-                              <input type="number" class="form-control" id="factor" value="0" min="0">
+                              <label for="factor_create">Factor</label>
+                              <input type="number" class="form-control" id="factor_create" value="0" min="0">
                             </div>
                           </div>
 
@@ -245,9 +246,9 @@
                         <div class="row">
                           <div class="col-12">
                             <div class="form-group">
-                              <label>Ejemplos de actividades</label>
+                              <label for="ejemplos_create">Ejemplos de actividades</label>
 
-                              <textarea class="form-control" rows="6" placeholder="Ingrese ejemplo de actividades..."></textarea>
+                              <textarea class="form-control" rows="6" id="ejemplos_create" placeholder="Ingrese ejemplo de actividades..."></textarea>
 
                             </div>
 
@@ -258,7 +259,7 @@
                       </div>
                       <div class="modal-footer justify-content-between">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
-                        <button type="button" class="btn btn-success">Guardar</button>
+                        <button type="button" class="btn btn-success" onclick="actionCreate();">Guardar</button>
                       </div>
                     </div>
                     <!-- /.modal-content -->
@@ -415,6 +416,10 @@
 <!-- AdminLTE for demo purposes -->
 <script src="../plantilla/dist/js/demo.js"></script>
 <!-- Page specific script -->
+
+<!-- Nuestro archivo de Javascrypt -->
+<script src="js/crud-denominacion.js"></script>
+
 <script>
   $(function () {
     $("#example1").DataTable({
